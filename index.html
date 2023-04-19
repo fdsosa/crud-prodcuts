@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+       
+    </head>
+    <body>
+        <div id="mainDiv">
+            <div id="inputDiv">
+                <h5>Title</h5>
+                <input id="itemTitle" type="text">
+                <h5>Description</h5>
+                <input id="itemDsc" type="text">
+                <h5>Price</h5>
+                <input id="itemPrice" type="number">
+                <h5>Market</h5>
+                <input id="itemMarket" type="text"><br/>
+                <button id="addBtn">Add</button>
+            </div>
+            <div id="listDiv">
+                <section id="listHeader">
+                    <div class="listTitle prductColumn">
+                        <p>Product</p>
+                    </div>
+                    <div class="listTitle dscColumn">
+                        <p>Description</p>
+                    </div>
+                    <div class="listTitle priceColumn">
+                        <p>Price</p>
+                    </div>
+                    <div class="listTitle marketColumn">
+                        <p>Market</p>
+                    </div>
+                </section>
+                <section id="listItems">
+                    <div id="item-1" class="itemMain">
+                        <div class="listItem titleColumn">
+                            <p>Bondiola Sarubi</p>
+                        </div>
+                        <div class="listItem dscColumn">
+                            <p>/kg</p>
+                        </div>
+                        <div class="listItem priceColumn">
+                            <p>320</p>
+                        </div>
+                        <div class="listItem marketColumn">
+                            <p>Tienda Inglesa</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="errorDiv">
+                <p id="errorMsg">Title field required.</p>
+            </div>
+    <script src="./index.js"></script>
+    </body>
+</html>

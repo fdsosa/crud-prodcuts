@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    color: #f1f1f1;
+    margin: 4vh 8vw;
+}
+
+#mainDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+#inputDiv {
+    border: #f1f1f1 solid 2px;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 30%;
+}
+
+#inputDiv button {
+    margin-top: 1rem;
+}
+
+#listDiv {
+    margin-left: 2rem;
+    width: 70%;
+}
+
+#listHeader {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: #f1f1f1 solid 2px;
+}
+
+.listTitle {
+    width: 30%;
+    text-align: center;
+    border-right: #f1f1f1 solid 2px;
+    padding: 0 4px;
+}
+
+.priceColumn {
+    width: 10% !important;
+}
+
+#listItems {
+    width: 100%;
+}
+
+.itemMain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.listItem {
+    width: 30%;
+    border-right: #f1f1f1 solid 2px;
+    padding: 0 4px;
+}
+
+#errorDiv {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    border: solid 4px rgb(218, 6, 6);
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    padding: 1rem 2rem;
+}
+
+#errorDiv p {
+    margin: 0;
+}
