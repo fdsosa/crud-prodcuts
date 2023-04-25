@@ -16,6 +16,10 @@ body {
     width: 30%;
 }
 
+#inputDiv h5 {
+    margin-bottom: 5px;
+}
+
 #inputDiv button {
     margin-top: 1rem;
 }
@@ -39,8 +43,12 @@ body {
     padding: 0 4px;
 }
 
-.priceColumn {
+.priceColumn, .deleteColumn {
     width: 10% !important;
+}
+
+.marketItem {
+    width: 20% !important;
 }
 
 #listItems {

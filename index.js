@@ -5,6 +5,8 @@ var itemTitle  = document.getElementById("itemTitle");
 var itemDsc    = document.getElementById("itemDsc");
 var itemPrice  = document.getElementById("itemPrice");
 var itemMarket = document.getElementById("itemMarket");
+var deleteButtons = document.getElementsByClassName('deleteButton')
+console.log(deleteButtons)
 
 loadList();
 
@@ -28,7 +30,16 @@ function createListItem(titleItem, dscItem, priceItem, marketItem) {
     createListBox('price', priceItem, itemBox);
     //market columm
     createListBox('market', marketItem, itemBox);   
-
+    //delete button
+    var deleteDiv = document.createElement('div');
+    deleteDiv.classList.add('deleteColumn');
+    var deleteButton = document.createElement('button');
+    deleteButton.innerText = 'x';
+    deleteButton.classList.add('deleteButton');
+    deleteButton.setAttribute('id', 'item-' + (itemsList.childNodes.length));
+    buttonsDeleter(deleteButton);
+    deleteDiv.appendChild(deleteButton);
+    itemBox.appendChild(deleteDiv);
     itemsList.appendChild(itemBox);
 }
 
@@ -38,6 +49,19 @@ itemBtn.addEventListener("click", () => {
     itemsList.push({title: itemTitle.value, dsc: itemDsc.value, price: itemPrice.value, market: itemMarket.value});
     localStorage.setItem('itemsList', JSON.stringify(itemsList));
 });
+
+function buttonsDeleter(element) {
+    element.addEventListener("click", () => {
+        var index = element.id.split('-');
+        itemsList.removeChild(itemsList.children[index[1]]);
+        var localItemsList = JSON.parse(localStorage.getItem('itemsList'));
+        localItemsList.splice([index[1]], 1);
+        localStorage.setItem('itemsList', JSON.stringify(localItemsList));
+        for (let i=0; i<deleteButtons.length; i++) {
+            deleteButtons[i].setAttribute('id', 'item-' + i);
+        }        
+    })
+}
 
 function loadList() {
     var itemsList = JSON.parse(localStorage.getItem('itemsList'));
